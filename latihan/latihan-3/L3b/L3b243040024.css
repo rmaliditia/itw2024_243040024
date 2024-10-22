@@ -1,0 +1,30 @@
+body {
+  background-color: aqua;
+  font-family: Georgia;
+}
+
+h1 {
+  font-family: "Comic Sans MS";
+  font-size: 60px;
+  color: darkblue;
+  text-align: center;
+}
+
+h4 {
+  text-align: right;
+  font-style: italic;
+}
+
+h3 a {
+  color: white;
+  font-variant: small-caps;
+}
+
+.p1 {
+  color: darkorange;
+}
+
+.p1,
+.p2 {
+  text-align: center;
+}
