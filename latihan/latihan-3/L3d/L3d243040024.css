@@ -1,5 +1,6 @@
 body {
-  background-color: aqua;
+  background-image: url("../img/background.png");
+  background-repeat: repeat-x;
   font-family: Georgia;
 }
 
@@ -11,23 +12,21 @@ h1 {
 }
 
 h4 {
-  text-align: right;
+  text-align: center;
   font-style: italic;
 }
 
-h3 a {
-  color: white;
-  font-variant: small-caps;
+h3 {
+  text-align: center;
 }
 
-h3 a:hover {
+h3 a {
   color: red;
-  text-decoration: none;
+  font-variant: small-caps;
 }
 
 .p1 {
   color: darkorange;
-  font-weight: 500;
 }
 
 .p1,

@@ -18,10 +18,15 @@ h4 {
 h3 a {
   color: white;
   font-variant: small-caps;
+  font-size: 18px;
 }
 
 .p1 {
   color: darkorange;
+}
+
+.p2 {
+  line-height: 2;
 }
 
 .p1,
