@@ -1,0 +1,687 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161517;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+/* Navbar Start */
+nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f21;
+  padding: 43.5px 4% 14px 4%;
+  border-bottom: 1.3px solid #30a669;
+  width: 100%;
+}
+
+/* Navbar Top Start */
+.nav-top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  background-color: #181818;
+  padding: 7px 4%;
+  border-bottom: 1.3px solid #30a669;
+}
+
+/* Navbar Top Left Start */
+.nav-top-left {
+  gap: 15px;
+  display: flex;
+}
+
+/* Language Selector Start */
+
+.language-selector {
+  position: relative;
+  display: flex;
+}
+
+.language-selector select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #1f1f21;
+  color: white;
+  border: 1px solid #30a669;
+  border-radius: 8px;
+  padding: 2px 19px 2px 9px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-selector select:hover {
+  border-color: #30a669;
+  background-color: #2a2a2c;
+}
+
+.language-selector {
+  position: relative;
+}
+
+.language-selector::after {
+  content: "▼";
+  font-size: 0.7em;
+  color: #30a669;
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Language Selector End */
+
+/* Email and Telp Start */
+.email,
+.telp {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: white;
+  font-size: 10px;
+}
+
+.email h4,
+.telp h4 {
+  font-weight: 300;
+}
+/* Email and Telp End */
+/* Navbar Top Left End */
+
+/* Sosmed Start */
+
+.sosmed {
+  display: flex;
+  gap: 10px;
+  margin-right: 3px;
+}
+
+.sosmed i {
+  color: white;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+.sosmed .fa-instagram:hover {
+  color: #e4405f;
+}
+
+.sosmed .fa-tiktok:hover {
+  color: #ffffff;
+}
+
+.sosmed .fa-facebook:hover {
+  color: #1877f2;
+}
+
+.sosmed .fa-whatsapp:hover {
+  color: #25d366;
+}
+
+.sosmed-side {
+  display: none;
+}
+/* Sosmed End */
+
+/* Navbar Top End */
+
+/* Navbar Bottom Start */
+
+.nav-bottom {
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Navbar Bottom Start */
+/* Logo Start */
+.logo {
+  font-family: "Zen Dots", serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  color: #30a669;
+  letter-spacing: 1px;
+}
+
+.logo-side {
+  display: none;
+}
+/* Logo End */
+
+/* Menu Start */
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 0.75em;
+  font-weight: 500;
+  gap: 22px;
+  margin-left: 124px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 400ms ease;
+  -webkit-transition: color 400ms ease;
+  -moz-transition: color 400ms ease;
+  -ms-transition: color 400ms ease;
+  -o-transition: color 400ms ease;
+}
+
+nav ul li a::after {
+  content: "";
+  border-bottom: 1px solid #30a669;
+  display: block;
+  padding-bottom: 3px;
+  transition: all 0.3s linear;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+nav ul li a:hover {
+  color: #30a669;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(0.8);
+  -webkit-transform: scaleX(0.8);
+  -moz-transform: scaleX(0.8);
+  -ms-transform: scaleX(0.8);
+  -o-transform: scaleX(0.8);
+}
+
+.icon a i {
+  display: none;
+}
+
+/* Menu End */
+
+/* Search & Account Start */
+.search-acc {
+  display: flex;
+  text-decoration: none;
+}
+
+.acc {
+  display: flex;
+  box-sizing: border-box;
+  border: 1.5px solid #30a669;
+  justify-content: center;
+  align-items: center;
+  background-color: #30a669;
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+}
+
+.acc i {
+  color: #30a669;
+  padding: 12.5px 7.6px;
+  transform: scale(1.4);
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+}
+
+.acc-side {
+  display: none;
+}
+
+.search {
+  display: flex;
+  box-sizing: border-box;
+  padding: 9px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  background-color: #30a669;
+  margin-right: 15px;
+}
+
+.search i {
+  color: white;
+}
+
+.search input {
+  border: none;
+  margin-left: 10px;
+  font-size: 0.8em;
+  width: 180px;
+  background-color: #30a669;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.668);
+}
+
+.search-side {
+  display: none;
+}
+/* Search & Account End */
+
+/* Menu Toggle Start */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+/* Menu Toggle End */
+/* Navbar Bottom Start */
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+    order: 1;
+  }
+
+  .logo {
+    order: 2;
+    margin-left: 40px;
+    font-size: 25px;
+  }
+
+  .search-acc {
+    order: 3;
+  }
+
+  .nav-bottom {
+    position: static;
+  }
+
+  nav ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 3.5% 3% 0 3%;
+    height: 100vh;
+    width: 60%;
+    top: 0;
+    left: 0;
+    background-color: #1f1f21;
+    box-shadow: -2 12px 10px 2px rgba(0, 0, 0, 0.3);
+    align-items: left;
+    margin-left: 0;
+    z-index: 1;
+    gap: 12px;
+    transition: all 1s;
+    transition: transform 800ms ease;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -webkit-transition: transform 800ms ease;
+    -moz-transition: transform 800ms ease;
+    -ms-transition: transform 800ms ease;
+    -o-transition: transform 800ms ease;
+  }
+
+  .search input {
+    width: 195px;
+    height: 40px;
+    font-size: 1.3em;
+    color: white;
+  }
+
+  nav ul li {
+    border-radius: 10px;
+    padding: 22px 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+  }
+
+  nav ul .icon:hover {
+    background-color: #739d8743;
+  }
+
+  nav ul li a {
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  nav ul li:hover a {
+    color: #30a669;
+  }
+
+  nav ul li a::after {
+    display: none;
+  }
+
+  nav ul li a i {
+    width: 50px;
+  }
+
+  .icon a i {
+    display: inline-block;
+    padding: 0 0 0 12px;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+
+  .logo-side {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    background-color: #272525;
+  }
+
+  .search-side {
+    width: 100%;
+    position: relative;
+    padding: 75px 10px 10px 10px;
+    background-color: #30a66900;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -7px;
+    border: 0;
+  }
+
+  .search-side .close i {
+    color: #30a669;
+    transform: scale(1.7);
+    padding: 9.6px 8.9px;
+    border: 1.5px solid #30a669;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+  }
+
+  .search-acc .search {
+    display: none;
+  }
+
+  .search {
+    margin-right: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  .search i {
+    margin-left: 16px;
+    margin-right: 5px;
+    transform: scale(1.9);
+    -webkit-transform: scale(1.9);
+    -moz-transform: scale(1.9);
+    -ms-transform: scale(1.9);
+    -o-transform: scale(1.9);
+  }
+
+  input::placeholder {
+    font-size: 16px;
+    align-items: center;
+    transform: translateX(11px);
+    -webkit-transform: translateX(11px);
+    -moz-transform: translateX(11px);
+    -ms-transform: translateX(11px);
+    -o-transform: translateX(11px);
+  }
+
+  .sosmed-side {
+    display: none;
+  }
+
+  .acc-side {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 0 0 40px;
+    background-color: #272525;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    color: #30a669;
+  }
+
+  .acc-side .acc i {
+    padding: 12.5px 8px;
+    transform: scale(1.8);
+    margin-right: 10px;
+    -webkit-transform: scale(1.8);
+    -moz-transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    -o-transform: scale(1.8);
+  }
+
+  .acc-side .acc h3 {
+    font-size: 15px;
+  }
+
+  .acc-side .acc h4 {
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  .acc {
+    border: 0;
+    background-color: transparent;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  nav ul {
+    padding: 0;
+  }
+
+  .nav-top .sosmed {
+    display: none;
+  }
+
+  .nav-top {
+    justify-content: center;
+    padding: 5px 3%;
+  }
+
+  .nav-top-left {
+    gap: 27px;
+  }
+
+  .nav-top .language-selector {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+  }
+
+  .email,
+  .telp {
+    font-size: 8px;
+  }
+
+  .nav-bottom .logo {
+    font-size: 0.9em;
+    margin-left: -10px;
+  }
+
+  .logo-side .logo h4 {
+    font-size: 1.5em;
+    margin-left: 35px;
+  }
+
+  .search-acc .acc {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
+
+  .search-side {
+    transform: scale(0.65);
+    -webkit-transform: scale(0.65);
+    -moz-transform: scale(0.65);
+    -ms-transform: scale(0.65);
+    -o-transform: scale(0.65);
+  }
+
+  .search i {
+    margin-left: 14px;
+  }
+
+  .nav-bottom ul .icon {
+    transform: scale(0.65);
+    -webkit-transform: scale(0.65);
+    -moz-transform: scale(0.65);
+    -ms-transform: scale(0.65);
+    -o-transform: scale(0.65);
+    padding: 22px 0;
+    margin: -38px 0 0 -26px;
+  }
+
+  .menu-toggle span {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
+
+  .sosmed-side {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 70px;
+    width: 100%;
+  }
+
+  .sosmed-side .sosmed {
+    gap: 15px;
+  }
+
+  .sosmed-side .sosmed i {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+
+  .acc-side {
+    padding: 0 0 0 18px;
+    margin-right: 25px;
+  }
+
+  .acc-side .acc i {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+
+  .acc-side .acc h3 {
+    font-size: 12px;
+  }
+
+  .acc-side .acc h4 {
+    font-weight: 400;
+  }
+}
