@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: linear-gradient(
+    145deg,
+    #0f2027 2%,
+    #203a43 30%,
+    #2c5364 55%,
+    #3a6073 70%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+/* Navbar Start */
+
+.menu {
+  position: fixed;
+  display: grid;
+  grid-template-areas: "logo menu-list menu-list icon";
+  padding: 0.8rem 7%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(38, 38, 38, 0.059);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 6px rgba(33, 33, 33, 0.1);
+  border-bottom: 1px solid rgba(116, 116, 116, 0.131);
+}
+
+.menu .logo {
+  grid-area: logo;
+}
+
+.menu-list {
+  display: grid;
+  align-items: center;
+  grid-area: menu-list;
+  grid-template-columns: repeat(6, minmax(80px, 1fr));
+}
+
+.menu-list h4 {
+  text-align: center;
+  font-weight: 500;
+}
+
+.menu-list h4 i {
+  display: none;
+}
+
+.menu-list .menu-more {
+  display: none;
+}
+
+.menu-more {
+  position: relative;
+  display: block;
+}
+
+.menu-list .profile {
+  display: none;
+}
+
+.button {
+  font-family: "Montserrat", sans-serif;
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  font-size: 15px;
+  position: absolute;
+  z-index: 1;
+  text-align: right;
+  border: 1.5px solid white;
+  border-radius: 13px 0 13px 13px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 13px 0 13px 13px;
+  -moz-border-radius: 13px 0 13px 13px;
+  -ms-border-radius: 13px 0 13px 13px;
+  -o-border-radius: 13px 0 13px 13px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+  color: #203a43;
+}
+
+.dropdown-content a:focus {
+  background-color: white;
+  color: #203a43;
+}
+
+.dropdown-content .top:hover {
+  border-radius: 13px 0px 0px 0px;
+  -webkit-border-radius: 13px 0px 0px 0px;
+  -moz-border-radius: 13px 0px 0px 0px;
+  -ms-border-radius: 13px 0px 0px 0px;
+  -o-border-radius: 13px 0px 0px 0px;
+}
+
+.dropdown-content .bottom:hover {
+  border-radius: 0px 0px 13px 13px;
+}
+
+.menu-more:hover button {
+  border-radius: 11px 11px 11px 11px;
+  -webkit-border-radius: 11px 11px 11px 11px;
+  -moz-border-radius: 11px 11px 11px 11px;
+  -ms-border-radius: 11px 11px 11px 11px;
+  -o-border-radius: 11px 11px 11px 11px;
+}
+
+.menu-more:hover .dropdown-content {
+  display: block;
+}
+
+.navbar-icon {
+  grid-area: icon;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.navbar-icon a {
+  border: 0.8px solid white;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  padding: 0.4rem 0.4rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+}
+
+.navbar-icon a:nth-child(2) {
+  text-align: center;
+  align-items: center;
+  transform: scale(0.86);
+  -webkit-transform: scale(0.86);
+  -moz-transform: scale(0.86);
+  -ms-transform: scale(0.86);
+  -o-transform: scale(0.86);
+  padding: 0.55rem 0.51rem;
+}
+
+.navbar-icon a:hover {
+  background-color: #fff;
+  color: #203a43;
+}
+
+.navbar-icon .hamburger-menu {
+  display: none;
+}
+/* Navbar End */
+
+.home {
+  display: grid;
+  height: 100vh;
+  padding: 0.8rem 7%;
+}
+
+.home .content-home {
+  display: grid;
+  grid-template-areas:
+    "headphoneimg headphonetext"
+    "content-bottom content-bottom";
+  grid-template-columns: 45% auto;
+  grid-template-rows: 83% 15%;
+  gap: 2rem;
+  width: 100%;
+}
+
+.home .content-home .headphone-img {
+  place-content: center;
+  display: grid;
+  grid-area: headphoneimg;
+}
+
+.headphone-img .slides {
+  display: grid;
+  align-content: center;
+}
+
+.headphone-img .slides img {
+  display: grid;
+  box-sizing: border-box;
+  /* background-color: #203a43; */
+  padding-top: 2.4rem;
+  width: 26rem;
+}
+
+.home .content-home .gadgetMart-text {
+  grid-area: headphonetext;
+  display: grid;
+  place-content: center;
+  padding-top: 1rem;
+}
+
+.home .content-home .gadgetMart-text h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  line-height: 1.1;
+}
+
+.home .content-home .gadgetMart-text p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgb(221, 218, 218);
+  width: 90%;
+  text-align: justify;
+}
+
+.button-home button {
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border: 2px solid #fff;
+  background-color: white;
+  color: #393e40;
+  font-weight: 600;
+  font-size: 0.8em;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 0.7em;
+  -webkit-border-radius: 0.7em;
+  -moz-border-radius: 0.7em;
+  -ms-border-radius: 0.7em;
+  -o-border-radius: 0.7em;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+.button-home button:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+/* home bottom */
+
+.home-bottom {
+  display: grid;
+  grid-area: content-bottom;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 0.7fr));
+  gap: 1rem;
+  margin-top: -1rem;
+  padding: 0.9rem 1.1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.home-bottom > div {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2rem;
+}
+
+.home-bottom > div i {
+  align-content: center;
+  grid-row: 1 / span 2;
+  font-size: 1.5rem;
+  color: #2c5364;
+  margin-right: 0.5rem;
+}
+
+.home-bottom > div h3 {
+  align-content: end;
+  display: grid;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #2c5364;
+}
+
+.home-bottom > div p {
+  align-content: start;
+  display: grid;
+  margin: 0;
+  grid-column: 2;
+  font-size: 0.6rem;
+  color: #3a6073;
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    font-size: 95%;
+  }
+
+  .home .content-home {
+    grid-template-areas:
+      "headphoneimg"
+      "headphonetext"
+      "content-bottom";
+    grid-template-columns: 100%;
+    grid-template-rows: 47% 34% auto;
+  }
+
+  .menu-list .menu-features,
+  .menu-list .menu-blog,
+  .menu-list .menu-contact {
+    display: none;
+  }
+
+  .menu-list .menu-more {
+    display: inline-block;
+  }
+
+  .menu-list {
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+  }
+
+  .menu-list h4 i {
+    display: none;
+  }
+
+  .navbar-icon a {
+    padding: 0.5rem 0.4rem 0.4rem 0.4rem;
+  }
+
+  .navbar-icon a:nth-child(2) {
+    padding: 0.55rem 0.55rem 0.55rem 0.5rem;
+  }
+
+  .navbar-icon .hamburger-menu {
+    display: none;
+    padding: 0.55rem 0.6rem 0.5rem 0.55rem;
+  }
+
+  .headphone-img .slides img {
+    width: 30rem;
+    padding-top: 7rem;
+    place-content: center;
+  }
+}
+
+.menu-list .profile {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  :root {
+    font-size: 80%;
+  }
+
+  .menu {
+    grid-template-areas: "logo icon";
+  }
+
+  .menu-list {
+    position: fixed;
+    top: 0;
+    right: -100%; /* ini nanti ganti lagi*/
+    width: 65%;
+    height: 100vh;
+    background-color: #0f2027;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8rem repeat(auto-fit, 40px);
+    padding: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .menu-list .profile {
+    /* margin-top: 2rem; */
+    display: grid;
+    grid-template-areas:
+      "img name"
+      "img email";
+    grid-template-rows: 1fr;
+    grid-template-columns: 20% 80%;
+    align-content: center;
+  }
+
+  .menu-list .profile img {
+    width: 30px;
+    border-radius: 3px;
+    grid-area: img;
+    grid-row: 1 / span 2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+
+  .menu-list .profile span {
+    align-content: center;
+  }
+
+  .menu-list .profile .name {
+    grid-area: name;
+    font-size: 0.9rem;
+  }
+  .menu-list .profile .email {
+    grid-area: email;
+    font-size: 0.7rem;
+    padding: 0;
+  }
+
+  .menu-list.active {
+    right: 0;
+  }
+
+  .menu-list h4 {
+    padding: 1rem 0;
+    text-align: left;
+  }
+
+  .menu-list h4 i {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 15px;
+  }
+
+  .navbar-icon .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+  }
+
+  .navbar-icon .hamburger-menu.active span {
+    transform: rotate(45deg);
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  .menu-list .menu-more {
+    display: none;
+  }
+
+  .menu-list .menu-features,
+  .menu-list .menu-blog,
+  .menu-list .menu-contact {
+    display: flex;
+  }
+
+  .home .content-home {
+    grid-template-rows: 43.7% 38% auto;
+    gap: 1rem;
+  }
+
+  .home .content-home .headphone-img {
+    place-content: end center;
+  }
+
+  .headphone-img .slides img {
+    width: 23rem;
+    padding-top: 0;
+  }
+
+  .home .content-home .gadgetMart-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-bottom {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(50px, 1fr));
+  }
+}
